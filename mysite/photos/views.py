@@ -14,7 +14,7 @@ class ProgressBarUploadView(View):
         return render(self.request, 'photos/progress_bar_upload/index.html', {'photos': photos_list})
 
     def post(self, request):
-        time.sleep(1)  # Not Needed
+        #time.sleep(1)  # To Test Locally
         form = PhotoForm(self.request.POST, self.request.FILES)
         if form.is_valid():
             photo = form.save()

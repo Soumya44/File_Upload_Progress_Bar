@@ -1,21 +1,13 @@
-# Multiple File Upload
+# File Upload with Progress Bar
 
-Example used in the blog post [Django Multiple Files Upload Using Ajax](https://simpleisbetterthancomplex.com/tutorial/2016/11/22/django-multiple-file-upload-using-ajax.html)
 
-## Running Locally
 
-```bash
-git clone https://github.com/sibtc/multiple-file-upload.git
-```
+<p align=center>
+<h1 align=center>####  Screenshots  ####</h1><br>
+    <img src="Screenshot.png">
+</p>
+<br>
 
-```bash
-pip install -r requirements.txt
-```
-
-```bash
-python manage.py migrate
-```
-
-```bash
-python manage.py runserver
-```
+Thanks,<br>
+Soumya Ranjan Behera<br>
+E-mail: soumyaranjanb02@gmail.com<br>

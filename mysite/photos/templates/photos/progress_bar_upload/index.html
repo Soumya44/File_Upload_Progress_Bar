@@ -2,7 +2,7 @@
 
 {% load static %}
 
-{% block title %}Progress Bar Upload{% endblock %}
+{% block title %}Progress Bar{% endblock %}
 
 {% block javascript %}
   {# JQUERY FILE UPLOAD SCRIPTS #}
@@ -25,30 +25,40 @@
            data-form-data='{"csrfmiddlewaretoken": "{{ csrf_token }}"}'>
   </div>
 
-  <table id="gallery" class="table table-bordered">
+
+  <table id="gallery" class="table table-striped">
     <thead>
       <tr>
-        <th>Photo</th>
+        <th>Uploaded Photo</th>
       </tr>
     </thead>
     <tbody>
       {% for photo in photos %}
         <tr>
-          <td><a href="{{ photo.file.url }}">{{ photo.file.name }}</a></td>
+            <td><a href="{{ photo.file.url }}">{{ photo.file.name }}</a></td>
         </tr>
       {% endfor %}
     </tbody>
   </table>
 
+<!--  Progress Bar Is Here  -->
   <div class="modal fade" id="modal-progress" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title">Uploading...</h4>
+        <div class="row" style="padding: 10px;">
+            <div class="col-md-12 col-sm-12">
+            <div class="modal-title">
+                <h4>Uploading...<button type="button" class="close float-right" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                </button></h4>
+            </div>
+
+            </div>
+
         </div>
         <div class="modal-body">
           <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 0%;">0%</div>
+            <div class="progress-bar bg-success progress-bar-striped" role="progressbar" style="width: 0%;">0%</div>
           </div>
         </div>
       </div>
